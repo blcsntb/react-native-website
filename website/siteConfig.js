@@ -8,7 +8,7 @@
 const RemarkablePlugins = require("./core/RemarkablePlugins");
 
 const users = require("./showcase.json");
-
+const defaultVersionShown = "0.57";
 const baseUrl = "/react-native/";
 const repoUrl = "https://github.com/facebook/react-native";
 const siteConfig = {
@@ -18,6 +18,7 @@ const siteConfig = {
   baseUrl,
   projectName: "react-native",
   repoUrl,
+  defaultVersionShown,
   users,
   editUrl: "https://github.com/facebook/react-native-website/blob/master/docs/",
   headerLinks: [
@@ -56,7 +57,8 @@ const siteConfig = {
     theme: "solarized-dark"
   },
   gaTrackingId: "UA-41298772-2",
-  scripts: ["https://snack.expo.io/embed.js", baseUrl + "js/codeblocks.js"]
+  scripts: ["https://snack.expo.io/embed.js", baseUrl + "js/codeblocks.js"],
+  cleanUrl: true
 };
 
 module.exports = siteConfig;
